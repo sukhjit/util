@@ -1,4 +1,4 @@
-package util
+package stringz
 
 import (
 	"math/rand"
@@ -49,7 +49,6 @@ func Sluggify(s string) string {
 	slug = strings.Trim(slug, "-")
 
 	// remove multiple hyphen
-	remh := regexp.MustCompile("[-]{2,}")
 	slug = remh.ReplaceAllString(slug, "-")
 
 	return slug

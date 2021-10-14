@@ -1,3 +1,3 @@
-# Utils
+# Util
 
-util functions for golang
+Utility functions for golang

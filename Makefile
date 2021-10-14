@@ -1,5 +1,5 @@
-RELEASE?=0.0.1
-COMMIT?=$(shell git rev-parse --short HEAD)
+GO=go
+GO_TEST=$(GO) test -race -failfast
 
 test:
-	go test -race ./...
+	@$(GO_TEST) ./...
