@@ -21,13 +21,11 @@ var (
 	dryRun     bool
 )
 
-// func createTask()
-
 func main() {
 	var sess *session.Session
 
 	awsRegion := flag.String("region", endpoints.ApSoutheast2RegionID, "AWS Region of the bucket")
-	bucketNamePtr := flag.String("bucket", "od-stg-ds-gracenote-data-backup", "S3 Bucket name")
+	bucketNamePtr := flag.String("bucket", "s3-example-bucket", "S3 Bucket name")
 	keyPrefixPtr := flag.String("prefix", "", "Delete objects that start with this value")
 	dryRunPtr := flag.Bool("dryrun", false, "Display items to delete without actually deleting them")
 	concurrencyPtr := flag.Int("workers", 1, "Number of workers to process jobs")
